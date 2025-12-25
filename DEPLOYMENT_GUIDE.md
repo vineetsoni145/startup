@@ -51,6 +51,7 @@ git push -u origin main
 ## Step 4: Access Your Live Website
 
 After a few minutes, your website will be live at:
+
 ```
 https://YOUR_USERNAME.github.io/farmish-website/
 ```
@@ -62,6 +63,7 @@ https://YOUR_USERNAME.github.io/farmish-website/
 If you want `example.html` to be the default page, you have two options:
 
 ### Option A: Rename to index.html (Recommended)
+
 ```bash
 cd "C:\Users\VINEET SONI\OneDrive\Desktop\Startup Farmish"
 git mv example.html index.html
@@ -70,7 +72,9 @@ git push
 ```
 
 ### Option B: Keep example.html
+
 Your site will be accessible at:
+
 ```
 https://YOUR_USERNAME.github.io/farmish-website/example.html
 ```
@@ -91,17 +95,21 @@ Changes will automatically update on GitHub Pages within a few minutes.
 ## Troubleshooting
 
 ### Issue: "remote origin already exists"
+
 ```bash
 git remote remove origin
 git remote add origin https://github.com/YOUR_USERNAME/farmish-website.git
 ```
 
 ### Issue: Authentication required
+
 You may need to:
+
 1. Use a Personal Access Token instead of password
 2. Or use GitHub Desktop for easier authentication
 
 ### Issue: Pages not showing
+
 1. Check that repository is Public (not Private)
 2. Wait 5-10 minutes after enabling Pages
 3. Check the Pages settings in repository Settings
@@ -144,4 +152,3 @@ git push
 # Pull latest changes
 git pull
 ```
-

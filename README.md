@@ -33,17 +33,20 @@ Startup Farmish/
 ## 🎨 Key Design Elements
 
 ### 3D Effects
+
 - CSS Perspective for 3D viewing context
 - Transform functions (translateZ, rotateX, rotateY)
 - Layered background gradients
 - Floating and shimmer animations
 
 ### Glassmorphism
+
 - Backdrop blur effects
 - Semi-transparent backgrounds
 - Frosted glass navigation bar
 
 ### Interactive Features
+
 - Product cards with hover effects
 - Category navigation
 - Smooth scroll animations
@@ -60,6 +63,7 @@ Visit the live website: [GitHub Pages Link] (after deployment)
 ## 🛠️ Setup & Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/yourusername/farmish-website.git
 ```
@@ -78,21 +82,25 @@ That's it! No build process required - it's a pure HTML/CSS/JS website.
 ## 🎯 Features in Detail
 
 ### Navigation
+
 - Sticky navigation bar with glassmorphism
 - Smooth scroll to sections
 - Mobile-responsive hamburger menu
 
 ### Product Display
+
 - Grid layout of organic products
 - Hover effects with smooth transitions
 - Product cards with images and pricing
 
 ### Categories
+
 - Visual category cards
 - Interactive hover states
 - Smooth category filtering
 
 ### Carousel
+
 - Auto-rotating image carousel
 - Manual navigation controls
 - 3D slide transitions
@@ -114,4 +122,3 @@ Created for Farmish - Organic Farm Delivery Service
 ---
 
 **Note**: Make sure to replace `example.html` with `index.html` if you want it to be the default page on GitHub Pages.
-
