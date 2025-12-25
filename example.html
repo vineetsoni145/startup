@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreshDoor - Organic Farm Delivery</title>
+    <meta
+      name="description"
+      content="Fresh organic farm products delivered to your door. Premium quality vegetables, fruits, and farm produce with fast delivery."
+    />
+    <meta
+      name="keywords"
+      content="organic farm, fresh vegetables, door delivery, organic produce, farm fresh"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="example.css" />
+  </head>
+  <body>
+    <!-- ===== MOBILE SIDEBAR ===== -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+      <div class="sidebar-header">
+        <span>Menu</span>
+        <i class="fas fa-times" onclick="closeSidebar()"></i>
+      </div>
+
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+      <a href="#premium">Premium</a>
+      <a href="#contact">Contact</a>
+      <a href="#">My Orders</a>
+      <a href="#">Logout</a>
+    </div>
+
+    <nav class="navbar">
+      <div class="nav-container">
+        <i class="fas fa-bars nav-icon menu-toggle" onclick="openSidebar()"></i>
+
+        <a href="#" class="logo">
+          <img
+            src="Untitled design (1).png"
+            alt="Farmish Logo"
+            class="logo-img"
+          />
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#premium">Premium</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-right">
+          <input
+            type="text"
+            class="search-bar"
+            placeholder="Search products..."
+          />
+          <i class="fas fa-user nav-icon" title="Login"></i>
+          <i class="fas fa-shopping-cart nav-icon" title="Cart"></i>
+        </div>
+      </div>
+    </nav>
+
+    <section class="delivery-status">
+      <h3>🚚 Fast Delivery Available</h3>
+      <p>Fresh organic produce delivered to your door in 2-4 hours</p>
+    </section>
+
+    <section class="carousel-container">
+      <div class="carousel" id="carousel">
+        <div class="carousel-slide">
+          <img
+            src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            alt="Fresh Vegetables"
+          />
+          <div class="slide-content">
+            <h2>🎉 Special Winter Offers</h2>
+            <p>Up to 30% off on seasonal vegetables</p>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img
+            src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            alt="Winter Vegetables"
+          />
+          <div class="slide-content">
+            <h2>🥬 Fresh Winter Vegetables</h2>
+            <p>Farm-fresh seasonal produce now available</p>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img
+            src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            alt="Organic Collection"
+          />
+          <div class="slide-content">
+            <h2>🌟 Premium Organic Collection</h2>
+            <p>Certified organic products for healthy living</p>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="carousel-nav prev" onclick="prevSlide()">
+        ❮
+      </button>
+      <button type="button" class="carousel-nav next" onclick="nextSlide()">
+        ❯
+      </button>
+    </section>
+
+    <section class="categories-section">
+      <div class="categories-container">
+        <h2 class="categories-title">Shop by Category</h2>
+        <div class="categories-grid">
+          <div class="category-card">
+            <div class="category-image">
+              <img
+                src="https://images.unsplash.com/photo-1540420773420-3366772f4999?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                alt="Fresh Vegetables"
+              />
+            </div>
+            <div class="category-content">
+              <h3>Vegetables</h3>
+              <p>Fresh organic vegetables from local farms</p>
+              <button
+                type="button"
+                class="category-btn"
+                onclick="filterCategory('vegetables')"
+                title="Browse Vegetables"
+                aria-label="Browse Vegetables category"
+              >
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <img
+                src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                alt="Fresh Fruits"
+              />
+            </div>
+            <div class="category-content">
+              <h3>Fruits</h3>
+              <p>Sweet and juicy seasonal fruits</p>
+              <button
+                type="button"
+                class="category-btn"
+                onclick="filterCategory('fruits')"
+                title="Browse Fruits"
+                aria-label="Browse Fruits category"
+              >
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <img
+                src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                alt="Organic Grains"
+              />
+            </div>
+            <div class="category-content">
+              <h3>Grains</h3>
+              <p>Wholesome organic grains and cereals</p>
+              <button
+                type="button"
+                class="category-btn"
+                onclick="filterCategory('grains')"
+                title="Browse Grains"
+                aria-label="Browse Grains category"
+              >
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <img
+                src="https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                alt="Organic Pulses"
+              />
+            </div>
+            <div class="category-content">
+              <h3>Pulses</h3>
+              <p>Protein-rich lentils and legumes</p>
+              <button
+                type="button"
+                class="category-btn"
+                onclick="filterCategory('pulses')"
+                title="Browse Pulses"
+                aria-label="Browse Pulses category"
+              >
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-section">
+      <h2 class="section-title">Fresh Products</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1445282768818-728615cc910a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+              alt="Fresh Organic Carrots"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fresh Organic Carrots</div>
+            <div class="product-price">₹120/kg</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="rating-text">(4.8)</span>
+            </div>
+            <div class="product-buttons">
+              <button
+                type="button"
+                class="btn btn-buy-now"
+                onclick="buyNow('Fresh Organic Carrots', '₹120/kg')"
+              >
+                Buy Now
+              </button>
+              <button
+                type="button"
+                class="btn btn-add-cart"
+                onclick="addToCart('Fresh Organic Carrots', '₹120/kg')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+              alt="Fresh Spinach Leaves"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fresh Spinach Leaves</div>
+            <div class="product-price">₹80/bunch</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              (4.9)
+            </div>
+            <div class="product-buttons">
+              <button
+                type="button"
+                class="btn btn-buy-now"
+                onclick="buyNow('Fresh Spinach Leaves', '₹80/bunch')"
+              >
+                Buy Now
+              </button>
+              <button
+                type="button"
+                class="btn btn-add-cart"
+                onclick="addToCart('Fresh Spinach Leaves', '₹80/bunch')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1546470427-e5ac89cd0b31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+              alt="Farm Fresh Tomatoes"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-name">Farm Fresh Tomatoes</div>
+            <div class="product-price">₹90/kg</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              (4.6)
+            </div>
+            <div class="product-buttons">
+              <button
+                type="button"
+                class="btn btn-buy-now"
+                onclick="buyNow('Farm Fresh Tomatoes', '₹90/kg')"
+              >
+                Buy Now
+              </button>
+              <button
+                type="button"
+                class="btn btn-add-cart"
+                onclick="addToCart('Farm Fresh Tomatoes', '₹90/kg')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+              alt="Fresh Cucumbers"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fresh Cucumbers</div>
+            <div class="product-price">₹60/kg</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              (4.7)
+            </div>
+            <div class="product-buttons">
+              <button
+                type="button"
+                class="btn btn-buy-now"
+                onclick="buyNow('Fresh Cucumbers', '₹60/kg')"
+              >
+                Buy Now
+              </button>
+              <button
+                type="button"
+                class="btn btn-add-cart"
+                onclick="addToCart('Fresh Cucumbers', '₹60/kg')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+              alt="Farm Fresh Potatoes"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-name">Farm Fresh Potatoes</div>
+            <div class="product-price">₹40/kg</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              (4.8)
+            </div>
+            <div class="product-buttons">
+              <button
+                type="button"
+                class="btn btn-buy-now"
+                onclick="buyNow('Farm Fresh Potatoes', '₹40/kg')"
+              >
+                Buy Now
+              </button>
+              <button
+                type="button"
+                class="btn btn-add-cart"
+                onclick="addToCart('Farm Fresh Potatoes', '₹40/kg')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+              alt="Fresh Broccoli"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fresh Broccoli</div>
+            <div class="product-price">₹150/piece</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              (4.5)
+            </div>
+            <div class="product-buttons">
+              <button
+                type="button"
+                class="btn btn-buy-now"
+                onclick="buyNow('Fresh Broccoli', '₹150/piece')"
+              >
+                Buy Now
+              </button>
+              <button
+                type="button"
+                class="btn btn-add-cart"
+                onclick="addToCart('Fresh Broccoli', '₹150/piece')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1508747703725-719777637510?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+              alt="Fresh Red Onions"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fresh Red Onions</div>
+            <div class="product-price">₹50/kg</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              (4.7)
+            </div>
+            <div class="product-buttons">
+              <button
+                type="button"
+                class="btn btn-buy-now"
+                onclick="buyNow('Fresh Red Onions', '₹50/kg')"
+              >
+                Buy Now
+              </button>
+              <button
+                type="button"
+                class="btn btn-add-cart"
+                onclick="addToCart('Fresh Red Onions', '₹50/kg')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+              alt="Fresh Bell Peppers"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fresh Bell Peppers</div>
+            <div class="product-price">₹100/kg</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              (4.4)
+            </div>
+            <div class="product-buttons">
+              <button
+                type="button"
+                class="btn btn-buy-now"
+                onclick="buyNow('Fresh Bell Peppers', '₹100/kg')"
+              >
+                Buy Now
+              </button>
+              <button
+                type="button"
+                class="btn btn-add-cart"
+                onclick="addToCart('Fresh Bell Peppers', '₹100/kg')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1594282486552-05b4d80fbb9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+              alt="Fresh Green Cabbage"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fresh Green Cabbage</div>
+            <div class="product-price">₹35/kg</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              (4.6)
+            </div>
+            <div class="product-buttons">
+              <button
+                type="button"
+                class="btn btn-buy-now"
+                onclick="buyNow('Fresh Green Cabbage', '₹35/kg')"
+              >
+                Buy Now
+              </button>
+              <button
+                type="button"
+                class="btn btn-add-cart"
+                onclick="addToCart('Fresh Green Cabbage', '₹35/kg')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+              alt="Fresh Beetroot"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fresh Beetroot</div>
+            <div class="product-price">₹70/kg</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              (4.3)
+            </div>
+            <div class="product-buttons">
+              <button
+                type="button"
+                class="btn btn-buy-now"
+                onclick="buyNow('Fresh Beetroot', '₹70/kg')"
+              >
+                Buy Now
+              </button>
+              <button
+                type="button"
+                class="btn btn-add-cart"
+                onclick="addToCart('Fresh Beetroot', '₹70/kg')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+              alt="Fresh Zucchini"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fresh Zucchini</div>
+            <div class="product-price">₹85/kg</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              (4.8)
+            </div>
+            <div class="product-buttons">
+              <button
+                type="button"
+                class="btn btn-buy-now"
+                onclick="buyNow('Fresh Zucchini', '₹85/kg')"
+              >
+                Buy Now
+              </button>
+              <button
+                type="button"
+                class="btn btn-add-cart"
+                onclick="addToCart('Fresh Zucchini', '₹85/kg')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1595475038665-8ad532d3e04d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+              alt="Fresh White Radish"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fresh White Radish</div>
+            <div class="product-price">₹45/kg</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              (4.2)
+            </div>
+            <div class="product-buttons">
+              <button
+                type="button"
+                class="btn btn-buy-now"
+                onclick="buyNow('Fresh White Radish', '₹45/kg')"
+              >
+                Buy Now
+              </button>
+              <button
+                type="button"
+                class="btn btn-add-cart"
+                onclick="addToCart('Fresh White Radish', '₹45/kg')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1551754655-cd27e38d2076?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+              alt="Fresh Sweet Corn"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fresh Sweet Corn</div>
+            <div class="product-price">₹30/piece</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              (4.9)
+            </div>
+            <div class="product-buttons">
+              <button
+                type="button"
+                class="btn btn-buy-now"
+                onclick="buyNow('Fresh Sweet Corn', '₹30/piece')"
+              >
+                Buy Now
+              </button>
+              <button
+                type="button"
+                class="btn btn-add-cart"
+                onclick="addToCart('Fresh Sweet Corn', '₹30/piece')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1577003833619-76bbd7f82948?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+              alt="Fresh Ginger Root"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fresh Ginger Root</div>
+            <div class="product-price">₹200/kg</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              (4.7)
+            </div>
+            <div class="product-buttons">
+              <button
+                type="button"
+                class="btn btn-buy-now"
+                onclick="buyNow('Fresh Ginger Root', '₹200/kg')"
+              >
+                Buy Now
+              </button>
+              <button
+                type="button"
+                class="btn btn-add-cart"
+                onclick="addToCart('Fresh Ginger Root', '₹200/kg')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1553978297-833d09932d31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+              alt="Fresh Garlic Bulbs"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fresh Garlic Bulbs</div>
+            <div class="product-price">₹180/kg</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              (4.5)
+            </div>
+            <div class="product-buttons">
+              <button
+                type="button"
+                class="btn btn-buy-now"
+                onclick="buyNow('Fresh Garlic Bulbs', '₹180/kg')"
+              >
+                Buy Now
+              </button>
+              <button
+                type="button"
+                class="btn btn-add-cart"
+                onclick="addToCart('Fresh Garlic Bulbs', '₹180/kg')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1590736969955-71cc94901144?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+              alt="Fresh Turnips"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fresh Turnips</div>
+            <div class="product-price">₹55/kg</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              (4.1)
+            </div>
+            <div class="product-buttons">
+              <button
+                type="button"
+                class="btn btn-buy-now"
+                onclick="buyNow('Fresh Turnips', '₹55/kg')"
+              >
+                Buy Now
+              </button>
+              <button
+                type="button"
+                class="btn btn-add-cart"
+                onclick="addToCart('Fresh Turnips', '₹55/kg')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+              alt="Fresh Lettuce Leaves"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fresh Lettuce Leaves</div>
+            <div class="product-price">₹90/bunch</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              (4.6)
+            </div>
+            <div class="product-buttons">
+              <button
+                type="button"
+                class="btn btn-buy-now"
+                onclick="buyNow('Fresh Lettuce Leaves', '₹90/bunch')"
+              >
+                Buy Now
+              </button>
+              <button
+                type="button"
+                class="btn btn-add-cart"
+                onclick="addToCart('Fresh Lettuce Leaves', '₹90/bunch')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1568584711271-61c9c2d6c4d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+              alt="Fresh Cauliflower"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fresh Cauliflower</div>
+            <div class="product-price">₹80/piece</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              (4.4)
+            </div>
+            <div class="product-buttons">
+              <button
+                type="button"
+                class="btn btn-buy-now"
+                onclick="buyNow('Fresh Cauliflower', '₹80/piece')"
+              >
+                Buy Now
+              </button>
+              <button
+                type="button"
+                class="btn btn-add-cart"
+                onclick="addToCart('Fresh Cauliflower', '₹80/piece')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1583663848850-46af132dc08e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+              alt="Fresh Okra (Ladyfinger)"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fresh Okra (Ladyfinger)</div>
+            <div class="product-price">₹75/kg</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              (4.8)
+            </div>
+            <div class="product-buttons">
+              <button
+                type="button"
+                class="btn btn-buy-now"
+                onclick="buyNow('Fresh Okra (Ladyfinger)', '₹75/kg')"
+              >
+                Buy Now
+              </button>
+              <button
+                type="button"
+                class="btn btn-add-cart"
+                onclick="addToCart('Fresh Okra (Ladyfinger)', '₹75/kg')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1659261200833-ec8761558af7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+              alt="Fresh Eggplant"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fresh Eggplant</div>
+            <div class="product-price">₹65/kg</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              (4.3)
+            </div>
+            <div class="product-buttons">
+              <button
+                type="button"
+                class="btn btn-buy-now"
+                onclick="buyNow('Fresh Eggplant', '₹65/kg')"
+              >
+                Buy Now
+              </button>
+              <button
+                type="button"
+                class="btn btn-add-cart"
+                onclick="addToCart('Fresh Eggplant', '₹65/kg')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">About Us</a>
+            <a href="#premium">Premium</a>
+            <a href="#contact">Contact</a>
+          </div>
+
+          <div class="footer-section">
+            <h3>Categories</h3>
+            <a href="#">Vegetables</a>
+            <a href="#">Fruits</a>
+            <a href="#">Herbs</a>
+            <a href="#">Dairy</a>
+            <a href="#">Grains</a>
+          </div>
+
+          <div class="footer-section">
+            <h3>Customer Service</h3>
+            <a href="#">Help Center</a>
+            <a href="#">Track Order</a>
+            <a href="#">Returns</a>
+            <a href="#">Shipping Info</a>
+            <a href="#">FAQ</a>
+          </div>
+
+          <div class="footer-section">
+            <h3>Legal</h3>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Refund Policy</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 FreshDoor. All rights reserved. | Delivering fresh
+            organic produce to your doorstep.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== MOBILE BOTTOM NAV ===== -->
+    <nav class="mobile-bottom-nav">
+      <a href="#home"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="#categories"
+        ><i class="fas fa-th-large"></i><span>Categories</span></a
+      >
+      <a href="#"><i class="fas fa-search"></i><span>Search</span></a>
+      <a href="#"><i class="fas fa-shopping-cart"></i><span>Cart</span></a>
+      <a href="#"><i class="fas fa-user"></i><span>Profile</span></a>
+    </nav>
+
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".carousel-slide");
+      const totalSlides = slides.length;
+
+      function showSlide(index) {
+        const carousel = document.getElementById("carousel");
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+      }
+
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+      }
+
+      setInterval(nextSlide, 5000);
+
+      function buyNow(productName, price) {
+        alert(`Proceeding to checkout for ${productName} at ${price}`);
+      }
+
+      function addToCart(productName, price) {
+        alert(`${productName} (${price}) has been added to your cart!`);
+        console.log(`Added to cart: ${productName} - ${price}`);
+      }
+
+      function filterCategory(category) {
+        alert(`Showing ${category} products!`);
+
+        document.querySelector(".products-section").scrollIntoView({
+          behavior: "smooth",
+        });
+        console.log(`Filtering by category: ${category}`);
+      }
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      function openSidebar() {
+        document.getElementById("mobileSidebar").classList.add("open");
+      }
+
+      function closeSidebar() {
+        document.getElementById("mobileSidebar").classList.remove("open");
+      }
+
+      // Simple hover effects for category cards only
+      const categoryCards = document.querySelectorAll(".category-card");
+      const productCards = document.querySelectorAll(".product-card");
+
+      // Parallax Effect on Scroll
+      window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        const parallaxElements = document.querySelectorAll(
+          ".carousel-container, .categories-section"
+        );
+
+        parallaxElements.forEach((element, index) => {
+          const speed = 0.5 + index * 0.1;
+          const yPos = -(scrolled * speed);
+          element.style.transform = `translateY(${yPos}px) translateZ(0)`;
+        });
+      });
+
+      // Animate cards on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -100px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.style.opacity = "1";
+              entry.target.style.transform = "translateY(0) translateZ(0)";
+            }, index * 100);
+          }
+        });
+      }, observerOptions);
+
+      productCards.forEach((card) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(30px)";
+        card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+        observer.observe(card);
+      });
+
+      categoryCards.forEach((card) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(30px)";
+        card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+        observer.observe(card);
+      });
+    </script>
+  </body>
+</html>
