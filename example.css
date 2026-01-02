@@ -1306,9 +1306,52 @@ body::after {
     font-weight: 600;
   }
 
-  /* Footer - Hide on mobile */
+  /* Footer - Show on mobile with proper styling */
   .footer {
-    display: none;
+    display: block !important;
+    background: #f8f9fa !important;
+    padding: 2rem 1rem 1rem !important;
+    margin-top: 2rem !important;
+    margin-bottom: 4rem !important; /* Space for bottom nav */
+  }
+
+  .footer-container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .footer-content {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .footer-section h3 {
+    color: #1a1a1a !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 0.75rem !important;
+    font-weight: 600 !important;
+  }
+
+  .footer-section a {
+    color: #666 !important;
+    font-size: 0.8rem !important;
+    margin-bottom: 0.5rem !important;
+    text-decoration: none !important;
+    display: block !important;
+  }
+
+  .footer-section a:hover {
+    color: #0c831f !important;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #e0e0e0 !important;
+    padding-top: 1rem !important;
+    text-align: center !important;
+    color: #999 !important;
+    font-size: 0.75rem !important;
   }
 }
 
@@ -2042,7 +2085,7 @@ html {
   .products-section {
     margin: 0 !important;
     padding: 1rem !important;
-    padding-bottom: 5rem !important;
+    padding-bottom: 1rem !important; /* Reduced bottom padding since footer will provide spacing */
   }
 
   .section-title {
