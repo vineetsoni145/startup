@@ -2199,3 +2199,59 @@ html {
     right: -3px !important;
   }
 }
+/* ===== STOP ALL ANIMATIONS AND SHIFTING ===== */
+@media (max-width: 768px) {
+  /* Remove all transitions and transforms from categories */
+  .category-card,
+  .category-card:hover,
+  .category-image,
+  .category-image img,
+  .category-content,
+  .category-content h3 {
+    transition: none !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  /* Remove all transitions and transforms from products */
+  .product-card,
+  .product-card:hover,
+  .product-image,
+  .product-image img,
+  .product-info,
+  .product-name,
+  .product-price,
+  .product-buttons,
+  .btn,
+  .btn:hover,
+  .btn-buy-now,
+  .btn-buy-now:hover,
+  .btn-add-cart,
+  .btn-add-cart:hover {
+    transition: none !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  /* Remove any 3D effects */
+  * {
+    transform-style: flat !important;
+    perspective: none !important;
+    will-change: auto !important;
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+  }
+
+  /* Ensure no hover effects cause shifting */
+  .category-card:hover {
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+  }
+
+  .product-card:hover {
+    box-shadow: none !important;
+    border-color: #f0f0f0 !important;
+    background: white !important;
+  }
+}
