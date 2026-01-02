@@ -2051,7 +2051,24 @@ html {
   }
 
   .products-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 0.5rem !important;
+  }
+
+  .product-card {
+    border: 1px solid #f0f0f0 !important;
+    border-radius: 8px !important;
+    background: white !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+    width: 100% !important;
+  }
+
+  .product-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: #f0f0f0 !important;
   }
 
   .product-image {
