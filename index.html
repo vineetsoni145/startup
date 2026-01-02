@@ -25,6 +25,22 @@
     <link rel="stylesheet" href="example.css" />
   </head>
   <body>
+    <!-- Mobile Header (Blinkit Style) -->
+    <div class="mobile-header">
+      <img
+        src="Untitled design (1).png"
+        alt="Farmish Logo"
+        class="mobile-logo"
+      />
+      <div class="mobile-search">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search for products..." />
+      </div>
+      <div class="mobile-profile">
+        <i class="fas fa-user"></i>
+      </div>
+    </div>
+
     <!-- ===== MOBILE SIDEBAR ===== -->
     <div class="mobile-sidebar" id="mobileSidebar">
       <div class="sidebar-header">
@@ -1127,5 +1143,32 @@
         observer.observe(card);
       });
     </script>
+
+    <!-- Mobile Bottom Navigation (Blinkit Style) -->
+    <div class="mobile-bottom-nav">
+      <a href="#home" class="nav-item active">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="#categories" class="nav-item">
+        <i class="fas fa-th-large"></i>
+        <span>Categories</span>
+      </a>
+      <a href="#search" class="nav-item">
+        <i class="fas fa-search"></i>
+        <span>Search</span>
+      </a>
+      <a href="#cart" class="nav-item">
+        <div style="position: relative">
+          <i class="fas fa-shopping-cart"></i>
+          <div class="cart-badge">3</div>
+        </div>
+        <span>Cart</span>
+      </a>
+      <a href="#profile" class="nav-item">
+        <i class="fas fa-user"></i>
+        <span>Profile</span>
+      </a>
+    </div>
   </body>
 </html>
