@@ -1926,3 +1926,216 @@ html {
     font-weight: 600;
   }
 }
+
+/* ===== EXACT BLINKIT MOBILE DESIGN OVERRIDE ===== */
+@media (max-width: 768px) {
+  /* Override existing mobile styles to match Blinkit exactly */
+
+  /* Body and general styles */
+  body {
+    background-color: #ffffff !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      sans-serif !important;
+  }
+
+  /* Mobile Header - Exact Blinkit Style */
+  .mobile-header {
+    padding: 0.75rem 1rem !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    box-shadow: none !important;
+  }
+
+  .mobile-logo {
+    height: 28px !important;
+  }
+
+  .mobile-search input {
+    padding: 0.6rem 0.75rem 0.6rem 2.2rem !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    font-size: 0.85rem !important;
+    background: #f8f9fa !important;
+  }
+
+  .mobile-search i {
+    left: 0.6rem !important;
+    font-size: 0.9rem !important;
+    color: #999 !important;
+  }
+
+  .mobile-profile {
+    width: 32px !important;
+    height: 32px !important;
+    background: #0c831f !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* Delivery Status - Blinkit Green */
+  .delivery-status {
+    background: #0c831f !important;
+    padding: 0.6rem 1rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  .delivery-status h3 {
+    font-size: 0.8rem !important;
+    font-weight: 500 !important;
+  }
+
+  .delivery-status p {
+    font-size: 0.7rem !important;
+  }
+
+  /* Categories - Circular Images like Blinkit */
+  .categories-section {
+    padding: 1rem 0 0.5rem !important;
+    border-bottom: 8px solid #f8f9fa !important;
+  }
+
+  .categories-title {
+    font-size: 1rem !important;
+    margin: 0 1rem 0.75rem !important;
+  }
+
+  .categories-grid {
+    gap: 1rem !important;
+    padding: 0 1rem 0.75rem !important;
+  }
+
+  .category-card {
+    min-width: 70px !important;
+    height: auto !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    border: none !important;
+    text-align: center !important;
+  }
+
+  .category-image {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    margin: 0 auto 0.4rem !important;
+    border: 2px solid #f0f0f0 !important;
+  }
+
+  .category-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .category-content {
+    padding: 0 !important;
+    height: auto !important;
+  }
+
+  .category-content h3 {
+    font-size: 0.7rem !important;
+    font-weight: 500 !important;
+    color: #333 !important;
+  }
+
+  /* Products Section - Exact Blinkit Style */
+  .products-section {
+    margin: 0 !important;
+    padding: 1rem !important;
+    padding-bottom: 5rem !important;
+  }
+
+  .section-title {
+    font-size: 1rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .products-grid {
+    gap: 0.5rem !important;
+  }
+
+  .product-image {
+    height: 100px !important;
+    background: #f8f9fa !important;
+  }
+
+  .product-info {
+    padding: 0.5rem !important;
+  }
+
+  .product-name {
+    font-size: 0.8rem !important;
+    font-weight: 400 !important;
+    color: #333 !important;
+    height: 2.4rem !important;
+  }
+
+  .product-price {
+    font-size: 0.85rem !important;
+    color: #1a1a1a !important;
+  }
+
+  .product-rating {
+    display: none !important;
+  }
+
+  .btn {
+    border-radius: 4px !important;
+    font-size: 0.7rem !important;
+    padding: 0.4rem 0.5rem !important;
+  }
+
+  .btn-buy-now {
+    background: #0c831f !important;
+  }
+
+  .btn-buy-now:hover {
+    background: #0a6e1a !important;
+  }
+
+  .btn-add-cart {
+    color: #0c831f !important;
+    border-color: #0c831f !important;
+  }
+
+  .btn-add-cart:hover {
+    background: #f0f8f0 !important;
+  }
+
+  /* Bottom Navigation - Exact Blinkit Colors */
+  .mobile-bottom-nav {
+    border-top: 1px solid #e0e0e0 !important;
+    padding: 0.5rem 0 0.3rem !important;
+  }
+
+  .nav-item {
+    color: #999 !important;
+    padding: 0.2rem !important;
+  }
+
+  .nav-item.active {
+    color: #0c831f !important;
+  }
+
+  .nav-item:hover {
+    color: #0c831f !important;
+  }
+
+  .nav-item i {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  .nav-item span {
+    font-size: 0.65rem !important;
+  }
+
+  .cart-badge {
+    background: #ff3333 !important;
+    width: 16px !important;
+    height: 16px !important;
+    font-size: 0.65rem !important;
+    top: -3px !important;
+    right: -3px !important;
+  }
+}
